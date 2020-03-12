@@ -1,0 +1,7 @@
+1) Databazi Emaily přejmenovat na Emaily.bak
+2) v SQL Management studiu pravým tlačítkem na databáze -> restore database 
+	zvolíme device a vybereme soubor s naší databázi
+	Po stisknutí tlačítka ok se nám databáze nahraje do sql studia
+3) otevření projektu 
+4) otevření data.edmx kliknout pravým tlačítkem myši a zvolit update model from database
+5) Spustit aplikaci
