@@ -22,7 +22,7 @@ namespace Odeslani_emailu
             TableCell tablecellEmail;
             TableCell tablecellVyber;
             TableRow tmpTableRow;
-            foreach (var kontakt in db.Kontakty)
+            foreach (var kontakt in db.Kontakty) //vkládání hodnot z databáze do buněk tabulky
                 {
                 tmpTableRow = new TableRow();
 
@@ -40,12 +40,12 @@ namespace Odeslani_emailu
 
                 CheckboxList.Add(tmpCheckBox);
 
-                tablecellJmeno.Width = 100;
+                tablecellJmeno.Width = 100; //nastavení velikosti buněk
                 tablecellPrijmeni.Width = 100;
                 tablecellEmail.Width = 200;
                 tablecellVyber.Width = 100;
 
-                tmpTableRow.Cells.Add(tablecellJmeno);
+                tmpTableRow.Cells.Add(tablecellJmeno);// přidání buněk do řádků
                 tmpTableRow.Cells.Add(tablecellPrijmeni);
                 tmpTableRow.Cells.Add(tablecellEmail);
                 tmpTableRow.Cells.Add(tablecellVyber);
@@ -53,7 +53,7 @@ namespace Odeslani_emailu
 
 
             }
-            PlaceHolder1.Controls.Add(table);
+            PlaceHolder1.Controls.Add(table);// Nahrání tabulky do aplikace
 
 
             Button1.Click += Button1_Click;
@@ -65,7 +65,7 @@ namespace Odeslani_emailu
             var oznaceneAdresy = CheckboxList.Where(x => x.Checked).Select(x => x.ID).ToList(); //vybírání označených adres
             foreach (var adresa in oznaceneAdresy)
                 emailTo.Append(adresa.Replace(" ", "") + ";");
-            Response.Redirect("mailto:" + emailTo.ToString());
+            Response.Redirect("mailto:" + emailTo.ToString());// otevření outlooku
 
 
         }
