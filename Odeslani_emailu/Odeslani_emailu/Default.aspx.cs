@@ -49,7 +49,7 @@ namespace Odeslani_emailu
                 tmpTableRow.Cells.Add(tablecellPrijmeni);
                 tmpTableRow.Cells.Add(tablecellEmail);
                 tmpTableRow.Cells.Add(tablecellVyber);
-                table.Rows.Add(tmpTableRow);
+                table.Rows.Add(tmpTableRow);// přidání řádku
 
 
             }
